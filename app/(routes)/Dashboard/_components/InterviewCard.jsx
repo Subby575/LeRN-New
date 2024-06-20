@@ -22,7 +22,7 @@ function InterviewCard({interview}) {
 
           
             <Button onClick={onFeedbackPress} size="sm" variant="outline" className="w-full">Feedback</Button>
-            <Button onClick={onStart} size="sm" className="w-full" >Start</Button>
+            {/* <Button onClick={onStart} size="sm" className="w-full" >Start</Button> */}
         </div>
     </div>
     

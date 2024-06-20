@@ -2,7 +2,7 @@ import { UserButton } from '@clerk/nextjs'
 import React from 'react'
 import Image from 'next/image'
 import Logo from '@/public/translogo.png'
-function Header() {
+function Nav() {
   return (
     <>
     <header className="bg-black">
@@ -25,4 +25,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Nav

@@ -35,7 +35,8 @@ function AddNewInterview() {
         console.log(jobPosition, jobDesc, jobExperience)
 
 
-        const InputPrompt = "Business Category: " + jobPosition + ", Business Description: " + jobDesc + ", Business Experience: " + jobExperience + " years. Based on this information, please give me " + process.env.NEXT_PUBLIC_INTERVIEW_QUESTION + " questions that can be asked during a business pitch to investors with answers in JSON format. Give each question and answer set as a field in JSON. Do not write anything other than the JSON format. The format will be [{'question': 'Question text here', 'answer': 'Answer text here'}, {'question': 'Question text here', 'answer': 'Answer text here'}, {'question': 'Question text here', 'answer': 'Answer text here'}]"
+        const InputPrompt = `Business Category: ${jobPosition}, Business Description: ${jobDesc}, Business Experience: ${jobExperience} years. Based on this information, please give me ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION} questions that can be asked during a business pitch to investors with answers in JSON format. The JSON format should be an array of objects where each object contains a 'question' and an 'answer' field. Do not include any other text or explanations. The format will be: [{"question": "Question text here", "answer": "Answer text here"}, {"question": "Question text here", "answer": "Answer text here"}, {"question": "Question text here", "answer": "Answer text here"}]`;
+
 
         const result = await chatSession.sendMessage(InputPrompt);
         const MockJsonResp = (result.response.text()).replace('```json', '').replace('```', '')

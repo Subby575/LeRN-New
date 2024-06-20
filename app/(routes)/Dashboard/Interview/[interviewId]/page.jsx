@@ -32,16 +32,16 @@ function Interview({ params }) {
           <div className='flex flex-col my-5 gap-5'>
             <div className='flex flex-col p-5 rounded-lg border gap-5 '>
               <h2 className='text-lg'>
-                {/* <strong>Business Category :</strong> {interviewData.jobPosition} */}
-                <strong>Business Category :</strong> Grocery
+                <strong>Business Category :</strong> {interviewData&&interviewData.jobPosition}
+                {/* <strong>Business Category :</strong> Grocery */}
               </h2>
               <h2 className='text-lg'>
-                {/* <strong>Business Description :</strong> {interviewData.jobDesc} */}
-                <strong>Business Description :</strong> Online Grocery Store
+                <strong>Business Description :</strong> {interviewData&&interviewData.jobDesc}
+                {/* <strong>Business Description :</strong> Online Grocery Store */}
               </h2>
               <h2 className='text-lg'>
-                {/* <strong>Years of experience :</strong> {interviewData.jobExperience} */}
-                <strong>Years of experience :</strong> 5
+                <strong>Years of experience :</strong> {interviewData&&interviewData.jobExperience}
+                {/* <strong>Years of experience :</strong> 5 */}
               </h2>
             </div>
             <div className='p-5 border rounded-lg border-yellow-400 bg-yellow-300'>

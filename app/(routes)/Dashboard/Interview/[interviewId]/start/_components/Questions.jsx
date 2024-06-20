@@ -38,19 +38,20 @@ function Questions({mockinterviewQuestions,activeQuestion}) {
     }
   }
 
-  console.log(mockinterviewQuestions)
+  console.log("what "+mockinterviewQuestions)
   return (
     <>
     <div className='p-5 border rounded-lg my-10' >
 
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 '>
         {mockinterviewQuestions&&mockinterviewQuestions.map((question,index)=>(
-            <h2 className={`p-2 bg-secondary rounded-full text-sm md:text-sm text-center cursor-pointer ${activeQuestion==index&&'bg-emerald-300  text-white'}`}>Question #{index+1}</h2>
+            <h2 className={`p-2 bg-gray-300 rounded-full text-sm md:text-sm text-center cursor-pointer ${activeQuestion==index&&'bg-emerald-400  text-gray-800'}`}>Question #{index+1}</h2>
         ))
         }
        
         </div>
-        <h2 className='my-5 text-md md:text-lg'>{mockinterviewQuestions&&mockinterviewQuestions[activeQuestion]?.question}</h2>
+        <h2 className='my-5 text-md md:text-lg'>
+          { mockinterviewQuestions&&mockinterviewQuestions[activeQuestion]?.question}</h2>
         <Volume2 className='cursor-pointer' onClick={()=>textToSpeech(mockinterviewQuestions[activeQuestion]?.question)}/>
 
         <div className='border rounded-lg p-5 bg-blue-100  mt-20' >

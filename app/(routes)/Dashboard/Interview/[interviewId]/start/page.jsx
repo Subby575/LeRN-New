@@ -27,23 +27,7 @@ function page({ params }) {
   }
   return (
     <>
- 
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-      {/* Questions */}
-      <Questions mockinterviewQuestions={mockinterviewQuestions}
-        activeQuestion={activeQuestion}
-      />
-
-      {/* Video Audio Recording */}
-      <RecordAnswer mockinterviewQuestions={mockinterviewQuestions}
-        activeQuestion={activeQuestion}
-        interviewData={interviewData}
-        />
-
-
-    </div>
-
-    <div className='flex justify-end gap-6'>
+     <div className='flex justify-end gap-6 mt-4'>
       {
         activeQuestion>0?
         <Button onClick={()=>(setActiveQuestion(activeQuestion-1))}>Previous Question</Button>:null
@@ -63,6 +47,22 @@ function page({ params }) {
       }
   
     </div>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+      {/* Questions */}
+      <Questions mockinterviewQuestions={mockinterviewQuestions}
+        activeQuestion={activeQuestion}
+      />
+
+
+      {/* Video Audio Recording */}
+      <RecordAnswer mockinterviewQuestions={mockinterviewQuestions}
+        activeQuestion={activeQuestion}
+        interviewData={interviewData}
+        />
+
+    </div>
+
+
     </>
   )
 }
